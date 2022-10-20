@@ -1,0 +1,1 @@
+# DesignPatterns_Assignment_Individual
