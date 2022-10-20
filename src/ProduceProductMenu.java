@@ -1,6 +1,19 @@
+import java.io.File;
+import java.io.FileReader;
+
+import java.io.*;
+import java.util.*;
 public class ProduceProductMenu implements ProductMenu {
 
 	public void showMenu() {
+		try{
+			File productFile = new File("ProductInfo.txt");
+			FileReader productDetails = new FileReader(productFile);
+			BufferedReader productBuffer = new BufferedReader(productDetails);
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
 
 	}
 
