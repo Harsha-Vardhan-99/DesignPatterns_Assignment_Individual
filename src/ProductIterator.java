@@ -6,6 +6,8 @@ public class ProductIterator {
 
 	public void iterator(ArrayList<String> productNames){
 		int index = 0;
+		System.out.println("Loading Menu...");
+		System.out.println("Iterator Design pattern in action...");
 		System.out.println("Menu:");
 		while(hasNext(index,productNames.size())){
 			System.out.println(productNames.get(index));

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Facade {
 
-	private int userType;
+	public int userType;
 
 	private Product theSelectedProduct;
 
@@ -45,12 +45,14 @@ public class Facade {
 					break;
 				}
 			}
+			currentLine = sellerBuffer.readLine();
 			while((currentLine !=null))
 			{
 				String[] lineArray = currentLine.split(":");
+				System.out.println(lineArray[1]);
 				String currentUsername = lineArray[0];
 				String currentPassword = lineArray[1];
-				if(currentUsername==username && currentPassword == password){
+				if(currentUsername.equals(username) && currentPassword.equals(password)){
 					flag = true;
 					System.out.println("seller found");
 					userType = 1;
@@ -72,25 +74,12 @@ public class Facade {
 
 	private void createUserInstance() {
 		if(userType==0){
-			int menuType;
-			System.out.println("Choose the type of menu!");
-			Scanner menuInput = new Scanner(System.in);
-			System.out.println("1. Meat, 2. Produce");
-			menuType = menuInput.nextInt();
-			if(menuType==1){
-				MeatProductMenu meatProductMenu = new MeatProductMenu();
-				meatProductMenu.showMenu();
-			} else if (menuType==2) {
-				ProduceProductMenu produceProductMenu = new ProduceProductMenu();
-				produceProductMenu.showMenu();
-			}
-			else{
-				System.out.println("Input Error");
-			}
 			thePerson = new Buyer();
+			thePerson.showMenu();
 		}
 		else if(userType==1) {
 			thePerson = new Seller();
+			thePerson.showMenu();
 		}
 	}
 

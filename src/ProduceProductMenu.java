@@ -13,7 +13,7 @@ public class ProduceProductMenu implements ProductMenu {
 			String productLine;
 			while((productLine=productBuffer.readLine()) !=null){
 				String[] productParts = productLine.split(":");
-				if(productParts[0]=="produce"){
+				if(productParts[0].equals("Produce")){
 					productNames.add(productParts[1]);
 				}
 			}
