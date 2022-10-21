@@ -9,6 +9,7 @@ public class Seller extends Person {
 	public void showMenu() {
 		System.out.println("Bridge Design Pattern in action...");
 		System.out.println("Welcome Seller!");
+		/********************* Factory Design Pattern ******************************/
 		System.out.println("Factory Design Pattern in Action...");
 		int menuType;
 		System.out.println("Choose the type of menu!");

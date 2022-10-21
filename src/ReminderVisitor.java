@@ -2,6 +2,8 @@ public class ReminderVisitor extends NodeVisitor {
 
 	private Reminder m_Reminder;
 
+	/********************* Visitor Design Pattern ******************************/
+
 	public void visitMenu(int userType) {
 		System.out.println("Visitor Design Pattern in action...");
 		System.out.println("userType: " + userType);

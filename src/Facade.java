@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Facade {
-
+    /****************** Facade Design Pattern **********************/
 	public int userType;
 
 	private Product theSelectedProduct;
@@ -33,6 +33,7 @@ public class Facade {
 			BufferedReader sellerBuffer = new BufferedReader(sellerDetails);
 			String currentLine;
 			boolean flag = false;
+			/********************* Bridge Design Pattern ******************************/
 			while((currentLine = buyerBuffer.readLine())!=null)
 			{
 				String[] lineArray = currentLine.split(":");

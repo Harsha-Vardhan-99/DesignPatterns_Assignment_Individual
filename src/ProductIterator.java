@@ -4,6 +4,8 @@ public class ProductIterator {
 
 	private ClassProductList classProductList;
 
+	/********************* Iterator Design Pattern ******************************/
+
 	public void iterator(ArrayList<String> productNames){
 		int index = 0;
 		System.out.println("Loading Menu...");
